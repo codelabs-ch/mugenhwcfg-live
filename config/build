@@ -1,8 +1,8 @@
 [Image]
 Architecture: amd64
 Archive-Areas: main
-Distribution: buster
-Mirror-Bootstrap: http://ftp.cz.debian.org/debian/
+Distribution: bullseye
+Mirror-Bootstrap: http://deb.debian.org/debian/
 
 [FIXME]
 Configuration-Version: 1:20190311

@@ -2,6 +2,6 @@
 
 set -e
 
-lb config noauto -a amd64 -d buster \
+lb config noauto -a amd64 -d bullseye \
         --bootappend-live "boot=live components intel_iommu=on nomodeset"
 	"${@}"

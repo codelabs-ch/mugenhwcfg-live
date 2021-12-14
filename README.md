@@ -4,7 +4,7 @@ This repository contains tooling to build a [Debian Live](https://live-team.page
 
 When booted, the live system will automatically run the tool and upload the output to the Debian [pastebin](http://paste.debian.net).
 
-To build the ISO image on a Debian 10.x (buster) system with `live-build` installed, clone this repository and run:
+To build the ISO image on a Debian 11.x (bullseye) system with `live-build` installed, clone this repository and run:
 
 ```
 sudo lb build
