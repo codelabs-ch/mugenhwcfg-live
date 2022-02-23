@@ -12,6 +12,6 @@ sudo lb build
 
 The run the ISO image under KVM/QEMU, it is sufficient to pass it to your desired `qemu` invocation using `-cdrom`.
 
-To boot on real hardware it should be sufficient to just dump the ISO image to an USB stick, but this has not yet been tested.
+To boot on real hardware it is sufficient to just dump the ISO image to an USB stick.
 
 Development of this tooling is sponsored by [Nitrokey GmbH](https://nitrokey.com).
