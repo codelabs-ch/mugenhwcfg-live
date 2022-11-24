@@ -31,3 +31,5 @@ umount /mnt
 ```
 
 Data created during system runtime, e.g. below `/home/user`, is located in the `sdb3/rw/home/user/` folder.
+
+Use the `create.sh` script to automatically build a persistence-enabled mugenhwcfg-live image.
