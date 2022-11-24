@@ -1,6 +1,12 @@
+label mugenhwcfg-headless-@FLAVOUR@
+	menu label ^mugenhwcfg, headless (@FLAVOUR@)
+	menu default
+	linux @LINUX@
+	initrd @INITRD@
+	append @APPEND_LIVE@ headless
+
 label live-@FLAVOUR@
 	menu label ^Live (@FLAVOUR@)
-	menu default
 	linux @LINUX@
 	initrd @INITRD@
 	append @APPEND_LIVE@
