@@ -4,8 +4,8 @@ set -e
 
 # Clone the Git sources of mugenhwcfg placing them in /home/src, and ensure
 # this directory will be owned by the live user.
-mkdir -p /home/src
-git clone -b devel --recursive \
+mkdir -p /opt
+git clone -b devel --depth=1 \
     http://git.codelabs.ch/git/muen/mugenhwcfg.git \
-    /home/src/mugenhwcfg
-chown -R 1000:1000 /home/src
+    /opt/mugenhwcfg
+cd /opt/mugenhwcfg && git submodule update --init --depth=1
