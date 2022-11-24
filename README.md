@@ -1,8 +1,9 @@
 # mugenhwcfg-live
 
-This repository contains tooling to build a [Debian Live](https://live-team.pages.debian.net/live-manual/html/live-manual/index.en.html) system, which can be used to run the `mugenhwcfg` [tool](https://git.codelabs.ch/?p=muen/mugenhwcfg.git) in an automated fashion.
+This repository contains tooling to build a [Debian Live](https://live-team.pages.debian.net/live-manual/html/live-manual/index.en.html) system, which can be used to run the `mugenhwcfg` [tool](https://git.codelabs.ch/?p=muen/mugenhwcfg.git) and others in an automated fashion.
 
-When booted, the live system will automatically run the tool. The generated hardware configuration is stored in `/home/src/output.xml`.
+When booted, the live system will automatically run several tools to collect hardware information and topology.
+The generated output will be stored in the `/home/user/mugenhwcfg/` directory.
 
 To build the ISO image on a Debian 11.x (bullseye) system with `live-build` installed, clone this repository and run:
 

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p /opt
+git clone --depth=1 https://github.com/chipsec/chipsec.git /opt/chipsec
+make -C /opt/chipsec/drivers/linux
+ln -s /opt/chipsec/drivers/linux/chipsec.ko /opt/chipsec.ko

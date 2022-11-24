@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p /opt
+mkdir -p /tmp/xhci_extcap
+
+wget -q "https://git.codelabs.ch/?p=libxhcidbg.git;a=blob_plain;f=misc/xhci_ext_caps.c;hb=6d80406d839abfec58c3d98fa08368072c932131" -O /tmp/xhci_extcap/xhci_ext_caps.c
+
+gcc -o /opt/xhci_ext_caps /tmp/xhci_extcap/xhci_ext_caps.c
+rm -rf /tmp/xhci_extcap
