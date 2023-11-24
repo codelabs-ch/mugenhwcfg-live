@@ -5,7 +5,7 @@ This repository contains tooling to build a [Debian Live](https://live-team.page
 When booted, the live system will automatically run several tools to collect hardware information and topology.
 The generated output will be stored in the `/home/user/mugenhwcfg/` directory.
 
-To build the ISO image on a Debian 11.x (bullseye) system with `live-build` installed, clone this repository and run:
+To build the ISO image on a Debian 12.x (bookworm) system with `live-build` installed, clone this repository and run:
 
 ```
 sudo lb build

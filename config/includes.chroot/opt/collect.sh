@@ -44,7 +44,6 @@ cd $MUGENHWCFG_SRC_DIR
 mv output.xml $OUT_DIR/$TARGET/
 )
 
-insmod /opt/chipsec.ko >chipsec 2>&1
 /opt/chipsec/chipsec_main.py >chipsec 2>&1
 ) 2>> stderr
 

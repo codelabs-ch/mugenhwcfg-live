@@ -26,7 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# run all scripts in ~/.autorun if it exists
-if [ -d "$HOME/.autorun" ] ; then
+# on tty1: run all scripts in ~/.autorun if it exists
+if [ -d "$HOME/.autorun" ] && [ $(tty) == "/dev/tty1" ]; then
     run-parts --exit-on-error --verbose $HOME/.autorun
 fi

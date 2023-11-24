@@ -2,4 +2,4 @@
 
 set -e
 
-apt -y --autoremove purge linux-headers-amd64 make gcc nasm
+apt -y --autoremove purge libpython3.11-dev linux-headers-$(uname -r) make gcc-12 cpp-12 nasm
