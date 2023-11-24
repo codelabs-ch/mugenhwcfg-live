@@ -54,10 +54,10 @@ tar cfJ $TARGET.tar.xz $TARGET
 
 echo "Output written to $OUT_DIR/$TARGET.tar.xz"
 cd /
-sleep 6
 
 if grep -q headless /proc/cmdline
 then
+	sleep 6
 	echo "Done -- shut down"
 	sync
 	/sbin/init 0
