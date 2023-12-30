@@ -3,6 +3,7 @@
 set -e
 
 mkdir -p /opt
+rm -rf /opt/mugenhwcfg
 git clone -b devel --depth=1 \
     https://git.codelabs.ch/git/muen/mugenhwcfg.git \
     /opt/mugenhwcfg
