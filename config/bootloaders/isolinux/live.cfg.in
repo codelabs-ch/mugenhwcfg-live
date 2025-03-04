@@ -3,13 +3,19 @@ label mugenhwcfg-headless-@FLAVOUR@
 	menu default
 	linux @LINUX@
 	initrd @INITRD@
+	append @APPEND_LIVE@ headless dis_ucode_ldr
+
+label mugenhwcfg-headless-ucode-@FLAVOUR@
+	menu label ^mugenhwcfg, headless, ucode (@FLAVOUR@)
+	linux @LINUX@
+	initrd @INITRD@
 	append @APPEND_LIVE@ headless
 
 label live-@FLAVOUR@
 	menu label ^Live (@FLAVOUR@)
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE@
+	append @APPEND_LIVE@ dis_ucode_ldr
 
 label live-@FLAVOUR@-failsafe
 	menu label ^Live (@FLAVOUR@ failsafe)
