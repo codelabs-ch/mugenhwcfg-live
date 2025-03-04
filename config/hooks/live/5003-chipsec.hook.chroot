@@ -4,6 +4,6 @@ set -e
 
 mkdir -p /opt
 rm -rf /opt/chipsec
-git clone --depth=1 -b 1.12.6 https://github.com/chipsec/chipsec.git /opt/chipsec
+git clone --depth=1 -b 1.13.10 https://github.com/chipsec/chipsec.git /opt/chipsec
 cd /opt/chipsec
 python setup.py build_ext -i
