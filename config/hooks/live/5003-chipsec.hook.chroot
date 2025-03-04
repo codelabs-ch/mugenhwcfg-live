@@ -6,4 +6,7 @@ mkdir -p /opt
 rm -rf /opt/chipsec
 git clone --depth=1 -b 1.13.10 https://github.com/chipsec/chipsec.git /opt/chipsec
 cd /opt/chipsec
+
+sed -i '/KVERS\t=/cKVERS=$(shell basename `find /lib/modules/. -mindepth 1 -maxdepth 1 -type d`)' drivers/linux/Makefile
+
 python setup.py build_ext -i
