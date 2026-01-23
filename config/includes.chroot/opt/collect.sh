@@ -45,6 +45,7 @@ mv output.xml $OUT_DIR/$TARGET/
 )
 
 /opt/chipsec/chipsec_main.py >chipsec 2>&1
+/opt/spectre-meltdown-checker/spectre-meltdown-checker.sh -v --no-color >spectre-meltdown-checker 2>&1
 ) 2>> stderr
 
 cd $OUT_DIR
