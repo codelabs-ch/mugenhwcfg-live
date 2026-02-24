@@ -48,6 +48,7 @@ lsusb -v > lsusb-v
 lspci -vvvnn > lspci
 lspci -t -vnn > lspci.tree
 lshw -xml -sanitize -numeric > lshw
+cpuid -r > cpuid
 
 /opt/vmxcap > vmxcap
 /opt/xhci_ext_caps /sys/devices/pci0000\:00/0000\:00\:14.0/resource0 > xhci
