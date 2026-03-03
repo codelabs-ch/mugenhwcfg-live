@@ -2,7 +2,7 @@
 
 set -e
 
-lb config noauto -a amd64 -d bookworm \
+lb config noauto -a amd64 -d trixie \
 	--firmware-binary false \
 	--firmware-chroot false \
 	--apt-recommends false \

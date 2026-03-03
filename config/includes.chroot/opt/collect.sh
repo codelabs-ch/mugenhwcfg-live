@@ -1,5 +1,19 @@
 #!/bin/bash
 
+get_vulnerabilities()
+{
+	VULN_DIR="/sys/devices/system/cpu/vulnerabilities"
+	if [ -d "$VULN_DIR" ]; then
+		for f in "$VULN_DIR"/*; do
+			name=$(basename "$f")
+			status=$(cat "$f")
+			printf "%-26s %s\n" "$name:" "$status" >> vulnerabilities
+		done
+	else
+		echo "Vulnerability directory not found" > vulnerabilities
+	fi
+}
+
 OUT_DIR=/home/user/mugenhwcfg
 MUGENHWCFG_SRC_DIR=/opt/mugenhwcfg
 
@@ -34,6 +48,7 @@ lsusb -v > lsusb-v
 lspci -vvvnn > lspci
 lspci -t -vnn > lspci.tree
 lshw -xml -sanitize -numeric > lshw
+cpuid -r > cpuid
 
 /opt/vmxcap > vmxcap
 /opt/xhci_ext_caps /sys/devices/pci0000\:00/0000\:00\:14.0/resource0 > xhci
@@ -45,6 +60,8 @@ mv output.xml $OUT_DIR/$TARGET/
 )
 
 /opt/chipsec/chipsec_main.py >chipsec 2>&1
+/opt/spectre-meltdown-checker/spectre-meltdown-checker.sh -v --no-color >spectre-meltdown-checker 2>&1
+get_vulnerabilities
 ) 2>> stderr
 
 cd $OUT_DIR

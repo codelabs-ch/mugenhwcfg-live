@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+mkdir -p /opt
+rm -rf /opt/spectre-meltdown-checker
+git clone --depth=1 \
+    https://github.com/speed47/spectre-meltdown-checker.git \
+    /opt/spectre-meltdown-checker
