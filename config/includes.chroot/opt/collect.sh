@@ -7,10 +7,11 @@ get_vulnerabilities()
 		for f in "$VULN_DIR"/*; do
 			name=$(basename "$f")
 			status=$(cat "$f")
-			printf "%-26s %s\n" "$name:" "$status" >> vulnerabilities
+			printf "%-26s %s\n" "$name:" "$status" >> vulnerabilities.summary
 		done
+		cp -R $VULN_DIR vulnerabilities
 	else
-		echo "Vulnerability directory not found" > vulnerabilities
+		echo "Vulnerability directory not found" > vulnerabilities.summary
 	fi
 }
 
