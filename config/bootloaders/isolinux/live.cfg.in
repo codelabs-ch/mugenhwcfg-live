@@ -1,15 +1,15 @@
-label mugenhwcfg-headless-@FLAVOUR@
-	menu label ^mugenhwcfg, headless (@FLAVOUR@)
+label mugenhwcfg-headless-ucode-@FLAVOUR@
+	menu label ^mugenhwcfg, headless, ucode (@FLAVOUR@)
 	menu default
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE@ headless dis_ucode_ldr
+	append @APPEND_LIVE@ headless
 
-label mugenhwcfg-headless-ucode-@FLAVOUR@
-	menu label ^mugenhwcfg, headless, ucode (@FLAVOUR@)
+label mugenhwcfg-headless-@FLAVOUR@
+	menu label ^mugenhwcfg, headless (@FLAVOUR@)
 	linux @LINUX@
 	initrd @INITRD@
-	append @APPEND_LIVE@ headless
+	append @APPEND_LIVE@ headless dis_ucode_ldr
 
 label live-@FLAVOUR@
 	menu label ^Live (@FLAVOUR@)
